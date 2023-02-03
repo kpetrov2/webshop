@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kontakt</title>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <form method="get" action="anfrageAbgeschickt.html">
+
+            <div class="inputs">
+                <h1 class="centerText">Anfrage einreichen</h1>
+
+                <label>Wählen Sie unten die Art der Anfrage aus:</label>
+                <select>
+                    <option value="Kundenservice">Kundenservice</option>
+                    <option value="Rücksendungen">Rücksendungen</option>
+                    <option value="Bestellstatus">Bestellstatus</option>
+                </select>
+
+                <label for="Email">E-Mail Adresse*</label>
+                <Input type="text" required>
+
+                <label for="Vorname">Vorname*</label>
+                <Input type="text" required>
+
+                <label for="Name">Name*</label>
+                <Input type="text" required>
+
+                <label for="bestellnummer">Bestellnummer</label>
+                <Input type="text">
+
+                <label for="Kundennummer">Kundennummer</label>
+                <Input type="text">
+
+                <label for="Beschreibung">Beschreibung*</label>
+                <textarea type="text" cols="30" rows="10"></textarea>
+
+                <p class="centerText">
+                    E-Mail: <br>
+                    info@webshop.de
+                </p>
+
+                <input id="submitBtn" type="submit" value="Absenden">
+            </div>
+
+            <div class="contactInformation">
+                <div class="adress">
+                    <p>
+                        Klaus Scharfenstein GmbH <br>
+                        Musterstraße 25 <br>
+                        70180 Stuttgart
+                    </p>
+                </div>
+
+                <div class="leading">
+                    <p>
+                        Geschäftsführung: <br>
+                        Klaus Scharfenstein
+                    </p>
+                </div>
+
+                <div class="phone">
+                    <p>
+                        Tel.: +49 152 59118502<br>
+                        Fax: +49 176 12345679
+                    </p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="../css/kontaktStyle.css">
+</body>
+
+</html>

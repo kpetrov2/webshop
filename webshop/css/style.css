@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: .5fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+  "header header header header"
+  "nav main main main"
+  "footer footer footer footer";
+}
+
+header, footer, nav {
+  background: lightgray;
+}
+
+header {
+  grid-area: header;
+  border-bottom: 5px solid black;
+  padding: 30px;
+}
+
+footer {
+  grid-area: footer;
+  border-top: 5px solid black;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  border-right: 5px solid black;
+}
+
+main {
+  grid-area: main;
+}
+
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10%;
+  padding: 10 px;
+  text-align: center;
+}
+
+.headerGrid .logo {
+  text-align: left;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.warenkorb {
+  position: relative;
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.warenMenge {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  font-size: 16px;
+  background-color: lightgreen;
+  padding: 1px;
+  border-radius: 20%;
+}
+
+.searchContainer input[type=text] {
+  padding: 6px;
+  margin-top: 16px;
+  font-size: 17px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: none;
+}
+
+.searchContainer input[type="text"]:focus {
+    outline: none;
+}
+
+.searchContainer button {
+  float: left;
+  padding: 6px 10px;
+  margin-top: 16px;
+  background: white;
+  font-size: 17px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: none;
+}
+
+.navbar {
+  padding: 25px 60px;
+}
+
+.sidebar {
+  width: 290px;
+  transition: 0.6s case;
+  transition-property: left;
+}
+
+.sidebar .menu {
+  width: 100%;
+}
+
+.sidebar .menu .menuTitel {
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.sidebar .menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar .menu .item a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+}
+
+.sidebar .menu .item a:hover {
+  background: #6c757d;
+  transition: 0.3s ease;
+}
+
+.sidebar .menu .item i {
+  margin-right: 15px;
+}
+
+.sidebar .menu .item .subitem {
+  padding-left: 80px;
+}
+
+.produktenListe {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media (max-width: 80rem) {
+  .produktenListe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 40rem) {
+  .produktenListe {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.produkt img {
+  max-width: 100%;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px gray;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.preis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.kaufen {
+  font-size: 26px;
+  color: green;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.kaufen:hover {
+  background: lightgray;
+  transition: 1s ease;
+  border-radius: 3px;
+}
+
+.gekauft {
+  font-size: 26px;
+  color: blue;
+  border: none;
+  background-color: transparent;
+}
+
+.warenkorbStatus {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  float: right;
+  gap: 20px;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 4px solid black;
+}
+
+.warenkorbStatus form {
+  overflow: hidden;
+}
+
+.warenkorbStatus input {
+  width: 100%;
+}
+
+.bestellen {
+  border: none;
+  width 100%;
+  background-color: lightgray;
+  font-weight: bolder;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.leeren {
+  width: 100%;
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.startseiteButton {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.warenkorbContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 60%);
+  gap: 20px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.produktInWarenkorb {
+  display: flex;
+  margin-left: 20px;
+}
+
+.bildWarenkorb {
+  border: 2px solid black;
+}
+
+.elementeKauf {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titelPreis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.produktWarenkorbPreis {
+  left: 10%;
+}
+
+.infoKauf {
+  float: left;
+  padding: 20px;
+}
+
+.bi-x-circle {
+  color: red;
+  cursor: pointer;
+}
+
+.impressum {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}

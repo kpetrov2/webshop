@@ -1,0 +1,40 @@
+body {
+    margin: 0 35% 0 35%;
+    font-size: 15px;
+    background-color: lightgrey;
+}
+
+input, select, textarea {
+    padding: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInformation {
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#submitBtn {
+    margin: 0 25% 0 25%;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border-color: grey;
+}
